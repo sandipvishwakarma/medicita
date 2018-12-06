@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.medicita.logintest.logintest">
+      <class name="com.medicita.mymessagetest.ComposeMsgTest">
         <methods>
           <include name="configAC"/>
-          <include name="verifylogintest"/>
+          <include name="selectdoctortest"/>
           <include name="configBC"/>
           <include name="configAM"/>
           <include name="configBM"/>
         </methods>
-      </class> <!-- com.medicita.logintest.logintest -->
+      </class> <!-- com.medicita.mymessagetest.ComposeMsgTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

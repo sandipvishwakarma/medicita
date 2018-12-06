@@ -2,6 +2,7 @@ package com.medicita.genriclib;
 
 
 
+import org.testng.annotations.Test;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 

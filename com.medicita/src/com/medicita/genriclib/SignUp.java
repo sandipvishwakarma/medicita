@@ -1,4 +1,5 @@
 package com.medicita.genriclib;
+import org.testng.annotations.Test;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -7,7 +8,7 @@ import org.testng.annotations.Test;
 import com.medicita.genriclib.baseClass;
 public class SignUp {
 	
-	@Test
+	//@Test
 	public void createpatient()
 	{
 		System.out.println("Login");

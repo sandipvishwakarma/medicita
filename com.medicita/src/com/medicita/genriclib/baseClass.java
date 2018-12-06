@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -14,6 +15,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
 import com.medicita.objectrepository.Flib;
+import com.medicita.objectrepository.login_page;
 
 
 public class baseClass {
@@ -33,6 +35,13 @@ public class baseClass {
 		Properties pobj=new Properties();
 		String url=fobj.loginobj().getProperty("url");
 		driver.get(url);
+		login_page lp = PageFactory.initElements(baseClass.driver, login_page.class);
+		String emailEnter=fobj.loginobj().getProperty("email");
+		String pwdenter=fobj.loginobj().getProperty("password");
+		
+		lp.getEmail().sendKeys(emailEnter);
+		lp.getPassword().sendKeys(pwdenter);
+		lp.getBtnsubmit().click();
 		/*driver.get("http://www.medicita.com");
 		driver.findElement(By.linkText("Login")).click();
 		driver.findElement(By.id("Email")).sendKeys("anshul.jain@brsoftech.org");
@@ -52,7 +61,7 @@ public class baseClass {
 	@AfterClass
 	public void configAC()
 	{
-		driver.close();
+		//driver.close();
 	}
 
 }

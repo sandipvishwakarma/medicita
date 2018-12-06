@@ -1,5 +1,6 @@
 package com.medicita.logintest;
 
+import org.testng.annotations.Test;
 import java.util.Properties;
 
 import org.openqa.selenium.support.PageFactory;
